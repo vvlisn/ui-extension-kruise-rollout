@@ -1,0 +1,96 @@
+product:
+  kruiseRollout: 分批发布
+
+kruiseRollout:
+  nav:
+    groupLabel: 分批发布
+
+  tabs:
+    workloadRollout: 分批发布
+
+  tableHeaders:
+    status: 状态
+    canaryStep: 灰度步骤
+    canaryState: 灰度状态
+    message: 消息
+    kind: 类型
+    phase: 阶段
+    batch: 批次
+    batchState: 批次状态
+
+  common:
+    rollout: 发布控制
+    batchRelease: 批次发布
+
+  detail:
+    common:
+      overview: 概览
+    rollout:
+      type: 类型
+      name: 名称
+      workload: 工作负载
+      namespace: 命名空间
+      phase: 阶段
+      message: 消息
+    batchRelease:
+      type: 类型
+      name: 名称
+      workload: 工作负载
+      namespace: 命名空间
+      phase: 阶段
+      progress: 进度
+      message: 消息
+
+  workloadTab:
+    headers:
+      type: 类型
+      name: 名称
+      namespace: 命名空间
+      phase: 阶段
+      progress: 进度
+      message: 消息
+    empty: 当前工作负载未找到关联的 Kruise Rollout 或 BatchRelease 资源。
+
+  config:
+    tabs:
+      workloadRef: 目标工作负载
+      strategy: 策略
+    workloadRef:
+      apiVersion: API 版本
+      kind: Kind
+      name: 名称
+      namePlaceholder: 选择 Deployment
+    strategy:
+      type: 类型
+      options:
+        canary: 灰度
+        blueGreen: 蓝绿
+    canary:
+      enableExtraWorkload: 启用额外工作负载
+      steps:
+        title: 步骤
+        add: + 新增步骤
+        stepLabel: 第 {index} 步
+        placeholder: 例如 1 或 50%
+        remove: 删除
+        hint: >-
+          步骤用于控制每一轮灰度中切换的副本数量。可填写绝对值（如 1）或百分比（如 50%）。
+
+    batchRelease:
+      tabs:
+        targetWorkload: 目标工作负载
+        releasePlan: 发布计划
+      workloadRef:
+        apiVersion: API 版本
+        kind: 类型
+        name: 名称
+      releasePlan:
+        batchPartition: 批次分区（batchPartition）
+        rollingStyle: 发布风格（rollingStyle）
+        rollingStyleOptions:
+          default: 默认
+          canary: 灰度
+          partition: 分区
+          blueGreen: 蓝绿
+        hint: >-
+          更详细的批次设置（例如每批次的 canaryReplicas、最终收敛策略等）建议通过「以 YAML 编辑」进行配置。

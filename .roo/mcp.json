@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "env": {
+        "DEFAULT_MINIMUM_TOKENS": ""
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/vinhuang/k8s/sbux/ui-extension-kruise-rollout"
+      ]
+    },
+    "codebase-cli": {
+      "command": "/usr/local/bin/codebase",
+      "args": [
+        "mcp"
+      ],
+      "alwaysAllow": [
+        "codebase-retrieval"
+      ],
+      "disabled": false
+    }
+  }
+}

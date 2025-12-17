@@ -1,0 +1,98 @@
+product:
+  kruiseRollout: Kruise Rollouts
+
+kruiseRollout:
+  nav:
+    groupLabel: Kruise Rollouts
+
+  tabs:
+    workloadRollout: Kruise Rollouts
+
+  tableHeaders:
+    status: Status
+    canaryStep: Canary Step
+    canaryState: Canary State
+    message: Message
+    kind: Kind
+    phase: Phase
+    batch: Batch
+    batchState: Batch State
+
+  common:
+    rollout: Rollout
+    batchRelease: BatchRelease
+
+  detail:
+    common:
+      overview: Overview
+    rollout:
+      type: Type
+      name: Name
+      workload: Workload
+      namespace: Namespace
+      phase: Phase
+      message: Message
+    batchRelease:
+      type: Type
+      name: Name
+      workload: Workload
+      namespace: Namespace
+      phase: Phase
+      progress: Progress
+      message: Message
+
+  workloadTab:
+    headers:
+      type: Type
+      name: Name
+      namespace: Namespace
+      phase: Phase
+      progress: Progress
+      message: Message
+    empty: No related Kruise Rollout or BatchRelease resources found for this workload.
+
+  config:
+    tabs:
+      workloadRef: Workload Reference
+      strategy: Strategy
+    workloadRef:
+      apiVersion: API Version
+      kind: Kind
+      name: Name
+      namePlaceholder: Select Deployment
+    strategy:
+      type: Type
+      options:
+        canary: Canary
+        blueGreen: Blue/Green
+    canary:
+      enableExtraWorkload: Enable Extra Workload
+      steps:
+        title: Steps
+        add: + Add Step
+        stepLabel: Step {index}
+        placeholder: e.g. 1 or 50%
+        remove: Remove
+        hint: >-
+          Steps control how many replicas are shifted in each canary wave. Values can
+          be an absolute number (e.g. 1) or a percentage (e.g. 50%).
+
+    batchRelease:
+      tabs:
+        targetWorkload: Target Workload
+        releasePlan: Release Plan
+      workloadRef:
+        apiVersion: API Version
+        kind: Kind
+        name: Name
+      releasePlan:
+        batchPartition: Batch Partition
+        rollingStyle: Rolling Style
+        rollingStyleOptions:
+          default: (default)
+          canary: Canary
+          partition: Partition
+          blueGreen: Blue/Green
+        hint: >-
+          Detailed batch settings (per-batch canaryReplicas, finalizing policy, etc.)
+          are still best managed through "Edit as YAML".
