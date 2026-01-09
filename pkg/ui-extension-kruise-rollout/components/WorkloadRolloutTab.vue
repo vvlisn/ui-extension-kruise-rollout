@@ -212,10 +212,6 @@ onMounted(async() => {
         </td>
       </template>
     </SortableTable>
-
-    <div v-if="!rows.length" class="kruise-rollout-tab__empty text-muted">
-      {{ t('kruiseRollout.workloadTab.empty') }}
-    </div>
   </div>
 </template>
 
@@ -227,11 +223,6 @@ onMounted(async() => {
 
 .kruise-rollout-tab__container {
   padding-top: 10px;
-}
-
-.kruise-rollout-tab__empty {
-  margin-top: 12px;
-  font-size: 12px;
 }
 
 .text-muted {

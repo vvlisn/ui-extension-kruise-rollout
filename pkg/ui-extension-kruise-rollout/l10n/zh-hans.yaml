@@ -49,7 +49,6 @@ kruiseRollout:
       phase: 阶段
       progress: 进度
       message: 消息
-    empty: 当前工作负载未找到关联的 Kruise Rollout 或 BatchRelease 资源。
 
   config:
     tabs:

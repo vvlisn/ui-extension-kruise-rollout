@@ -49,7 +49,6 @@ kruiseRollout:
       phase: Phase
       progress: Progress
       message: Message
-    empty: No related Kruise Rollout or BatchRelease resources found for this workload.
 
   config:
     tabs:
